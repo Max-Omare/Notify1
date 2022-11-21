@@ -1,6 +1,6 @@
 class AlertsController < ApplicationController
   before_action :set_service, only: %i[destroy]
-  # before_action :get_users
+  before_action :get_users
 
   def index
     @alerts = Alert.all
@@ -23,9 +23,9 @@ class AlertsController < ApplicationController
     @alert.destroy
   end
 
-  # def get_users
-  #   @users = User.all
-  # end
+  def get_users
+    @users = User.all
+  end
 
   private
 
